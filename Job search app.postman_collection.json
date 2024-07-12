@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "ea56ae0b-049b-43f9-af90-719a583fe837",
+		"name": "Job search app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34535596"
+	},
+	"item": [
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhmYjlhMDE5ZDY3NjMwODk0OTJjMTAiLCJpYXQiOjE3MjA2OTY4ODl9.JG1WwvbxIgvOvJ1eBFpl51NUJTJSBkhG8SAxNW8qJtY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n            \r\n               \"email\": \"john@gmail.com\",\r\n        \"password\": \"John$123\"\r\n\r\n        \r\n        }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/user/signIn",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "company",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhmZGIyY2ZjM2QwMTAzNzM1YzFjMjUiLCJpYXQiOjE3MjA3MjU5Mjl9.GNklDHGz756tiu_UeE9rurGadZzf-KCgP-Ks1Uc6HFo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"companyName\": \"lectroBar\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/company/searchForCompany",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"company",
+						"searchForCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "job",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhmYjlhMDE5ZDY3NjMwODk0OTJjMTAiLCJpYXQiOjE3MjA3MzAzMjZ9.lJcUmFfG4ookuakTM0Bz7MMmdqqspVDq_xzn0q1FZPw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \r\n        \"jobLocation\": \"remotely\",\r\n        \"workingTime\":\"part-time\" ,\r\n        \"seniorityLevel\":\"CTO\" \r\n       \r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/job/jobsFilter",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"job",
+						"jobsFilter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "application",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "jobapp eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjhmYjlhMDE5ZDY3NjMwODk0OTJjMTAiLCJpYXQiOjE3MjA3NjkyNTN9.VpJYDQAPGEEg4-XrIJ6hkXf0uRnp6lKao0vnpx6g5TI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"jobId\": \"66904815d61e0b8964ce86df\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/app/allAppsForJob",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"app",
+						"allAppsForJob"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
